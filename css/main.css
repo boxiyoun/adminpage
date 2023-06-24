@@ -1,0 +1,54 @@
+html {
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.menubar {
+  position: fixed;
+  width: 150px;
+  height: 100vh;
+  padding-top: 15px;
+  background: #604dd7;
+  overflow: hidden;
+  z-index: 5;
+  color: #ffffff;
+  transform: translateX(-100px);
+  transition: 1s;
+}
+
+.menubar-container {
+  margin: 12px 0px 0px 15px;
+  cursor: pointer;
+}
+.menubar-container i {
+  transition: all 0.5s;
+  transform: translateX(100px);
+}
+
+.menubar:hover {
+  transform: translateX(0);
+}
+
+.menubar:hover i {
+  transform: translateX(0px);
+}
+
+.main {
+  margin-left: 50px;
+}
+
+.icons {
+  display: inline-flex;
+  background-color: #0d91dd;
+}
+
+.dash {
+  background: #eee;
+}/*# sourceMappingURL=main.css.map */

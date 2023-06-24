@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
+  <script src="https://kit.fontawesome.com/d7d0341db1.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous">
+  </script>
+</head>
+
+<body>
+  <div>
+    <div class="menubar">
+      <div class="menubar-container">
+        <i class="fa-solid fa-house-chimney"></i>
+        <span>Home</span>
+      </div>
+      <div class="menubar-container">
+        <i class="fa-solid fa-headphones-simple"></i>
+        <span>Services</span>
+      </div>
+      <div class="menubar-container">
+        <i class="fa-solid fa-flag"></i>
+        <span>Alerts</span>
+      </div>
+      <div class="menubar-container">
+        <i class="fa-solid fa-chart-pie" style="margin-left: -3px;"></i>
+        <span>Stats</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+
+    <div class="header shadow">
+      <div class="row">
+        <div class="col-8 search">
+          <input type="text" placeholder="Search">
+          <button class="btn">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+        </div>
+
+        <div class="col-2">
+          <div class="icons">
+            <i class="fa-solid fa-bell"></i>
+            <span>5</span>
+          </div>
+          <div class="icons">
+            <i class="fa-solid fa-envelope"></i>
+            <span>9</span>
+          </div>
+        </div>
+
+        <div class="username col-2">
+          <p>George Kim</p>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container dash">
+      <h3>Dashboard</h3>
+      <div class="dash-box shadow">
+        <div class="dash-content">
+          <p>Earnings(Monthly)</p>
+          <p>$400,000</p>
+        </div>
+        <div class="icons big">
+          <i class="fa-solid fa-calendar"></i>
+        </div>
+      </div>
+      <div class="dash-box shadow">
+        <div class="dash-content">
+          <p>Earnings(Annual)</p>
+          <p>$800,000</p>
+        </div>
+        <div class="icons big">
+          <i class="fa-solid fa-dollar-sign"></i>
+        </div>
+      </div>
+      <div class="dash-box shadow">
+        <div class="dash-content">
+          <p>Tasks</p>
+          <p>13</p>
+        </div>
+        <div class="icons big">
+          <i class="fa-solid fa-list-check"></i>
+        </div>
+      </div>
+      <div class="dash-box shadow">
+        <div class="dash-content">
+          <p>Requests</p>
+          <p>26</p>
+        </div>
+        <div class="icons big">
+          <i class="fa-solid fa-comments"></i>
+        </div>
+      </div>
+    </div>
+
+    <div class="container visual">
+      <div class="charts shadow">
+        <div>
+          <h4>Earnings Overview</h4>
+        </div>
+        <canvas id="myChart"></canvas>
+      </div>
+      <div class="tasks shadow">
+        <div>
+          <h4>Tasks</h4>
+        </div>
+        <div>
+          <ul>
+            <li>Borrowed Items<div class="alert round">
+                <p>14</p>
+              </div>
+            </li>
+            <li>Trello requests<div class="alert round">
+                <p>2</p>
+              </div>
+            </li>
+            <li>Marked Comments<div class="alert round">
+                <p>1</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var ctx = document.getElementById('myChart').getContext('2d');
+    var myChart = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        datasets: [{
+          label: '# monthly',
+          data: [0, 10, 5, 3, 20, 30, 45],
+          fill: true,
+          backgroundColor: '#5f4dd7d2',
+          borderColor: '#604dd7',
+          borderWidth: 1,
+          tension: 0.4
+        }]
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

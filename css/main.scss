@@ -1,0 +1,118 @@
+$c-white: #ffffff;
+$c-purple: #604dd7;
+$c-grey: #5e5e5e;
+$c-black: #363636;
+$c-lightgrey: #eee;
+$c-mint: #5ac3b7;
+$c-green: #4ec846;
+$c-yellow: #eec41d;
+$c-red: #e44949;
+$c-blue: #0d91dd;
+$default: 16px;
+$small: 12px;
+
+html {
+  line-height: 1.15;
+}
+
+body {
+  margin: 0;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.menubar {
+  position: fixed;
+  width: 150px;
+  height: 100vh;
+  padding-top: 15px;
+  background: $c-purple;
+  overflow: hidden;
+  z-index: 5;
+  color: $c-white;
+  transform: translateX(-100px);
+  transition: 1s;
+}
+
+.menubar-container {
+  margin: 12px 0px 0px 15px;
+  cursor: pointer;
+
+  i {
+    transition: all 0.5s;
+    transform: translateX(100px);
+  }
+}
+
+.menubar:hover {
+  transform: translateX(0);
+}
+
+.menubar:hover i {
+  transform: translateX(0px);
+}
+
+
+
+
+
+.main {
+  margin-left: 50px;
+}
+
+
+
+
+
+
+.header {
+}
+
+.search {
+}
+
+.btn {
+}
+
+.icons {
+  display: inline-flex;
+  background-color: #0d91dd;
+}
+
+.username {
+}
+
+
+
+
+
+
+
+.dash {
+  background: $c-lightgrey;
+}
+
+.dash-box {}
+
+.dash-content {}
+
+
+
+
+
+.visual {}
+
+.charts {}
+
+.tasks {}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px) {}
