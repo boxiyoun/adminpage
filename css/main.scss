@@ -25,6 +25,9 @@ div {
   box-sizing: border-box;
 }
 
+a {
+  color: $c-black;
+}
 .menubar {
   position: fixed;
   width: 150px;

@@ -10,6 +10,10 @@ div {
   box-sizing: border-box;
 }
 
+a {
+  color: #444444;
+}
+
 .menubar {
   position: fixed;
   width: 150px;
