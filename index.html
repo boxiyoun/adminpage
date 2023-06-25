@@ -41,67 +41,116 @@
 
     <div class="header shadow">
       <div class="row">
-        <div class="col-8 search">
-          <input type="text" placeholder="Search">
-          <button class="btn">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+        <div class="col-lg-8">
+
+
+
+          <nav class="navbar d-lg-none bg-body-tertiary">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <div class="input-group search-md">
+                    <input type="text" class="form-control" placeholder="Search">
+                    <button type="button" class="btn btn-dark"><i class="fa-solid fa-magnifying-glass"></i></button>
+                  </div>
+                  <div class="topside col-lg-4">
+                    <div class="username order-lg-3">
+                      <span>George Kim</span>
+                    </div>
+                    <div class="icon-box">
+                      <i class="fa-solid fa-bell"></i>
+                      <span class="noti">5</span>
+                    </div>
+                    <div class="icon-box">
+                      <i class="fa-solid fa-envelope"></i>
+                      <span class="noti">9</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+
+
+
+          <div class="d-none d-lg-block">
+            <div class="input-group search-lg">
+              <input type="text" placeholder="Search">
+              <button type="button" class="btn btn-dark"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </div>
+          <div class="d-lg-none">
+            <div class="input-group search-md">
+              <input type="text" class="form-control" placeholder="Search">
+              <button type="button" class="btn btn-dark"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+          </div>
         </div>
 
-        <div class="col-2">
-          <div class="icons">
+        <div class="topside col-lg-4">
+          <div class="username order-lg-3">
+            <span>George Kim</span>
+          </div>
+          <div class="icon-box">
             <i class="fa-solid fa-bell"></i>
-            <span>5</span>
+            <span class="noti">5</span>
           </div>
-          <div class="icons">
+          <div class="icon-box">
             <i class="fa-solid fa-envelope"></i>
-            <span>9</span>
+            <span class="noti">9</span>
           </div>
-        </div>
-
-        <div class="username col-2">
-          <p>George Kim</p>
         </div>
       </div>
     </div>
 
 
-    <div class="container dash">
-      <h3>Dashboard</h3>
-      <div class="dash-box shadow">
-        <div class="dash-content">
-          <p>Earnings(Monthly)</p>
-          <p>$400,000</p>
+    <div class="dash">
+      <h3 class="mb-4">Dashboard</h3>
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="dash-box1 shadow">
+            <div class="dash-content">
+              <p>Earnings(Monthly)</p>
+              <p>$400,000</p>
+            </div>
+            <i class="fa-solid fa-calendar"></i>
+          </div>
         </div>
-        <div class="icons big">
-          <i class="fa-solid fa-calendar"></i>
+
+        <div class="col-lg-3">
+          <div class="dash-box2 shadow">
+            <div class="dash-content">
+              <p>Earnings(Annual)</p>
+              <p>$800,000</p>
+            </div>
+            <i class="fa-solid fa-dollar-sign"></i>
+          </div>
         </div>
-      </div>
-      <div class="dash-box shadow">
-        <div class="dash-content">
-          <p>Earnings(Annual)</p>
-          <p>$800,000</p>
+
+        <div class="col-lg-3">
+          <div class="dash-box3 shadow">
+            <div class="dash-content">
+              <p>Tasks</p>
+              <p>13</p>
+            </div>
+            <i class="fa-solid fa-list-check"></i>
+          </div>
         </div>
-        <div class="icons big">
-          <i class="fa-solid fa-dollar-sign"></i>
-        </div>
-      </div>
-      <div class="dash-box shadow">
-        <div class="dash-content">
-          <p>Tasks</p>
-          <p>13</p>
-        </div>
-        <div class="icons big">
-          <i class="fa-solid fa-list-check"></i>
-        </div>
-      </div>
-      <div class="dash-box shadow">
-        <div class="dash-content">
-          <p>Requests</p>
-          <p>26</p>
-        </div>
-        <div class="icons big">
-          <i class="fa-solid fa-comments"></i>
+
+        <div class="col-lg-3">
+          <div class="dash-box4 shadow">
+            <div class="dash-content">
+              <p>Requests</p>
+              <p>26</p>
+            </div>
+            <i class="fa-solid fa-comments"></i>
+          </div>
         </div>
       </div>
     </div>

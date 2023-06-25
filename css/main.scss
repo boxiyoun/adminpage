@@ -1,15 +1,17 @@
 $c-white: #ffffff;
 $c-purple: #604dd7;
-$c-grey: #5e5e5e;
-$c-black: #363636;
-$c-lightgrey: #eee;
+$c-grey: #7b7b7b;
+$c-black: #444444;
+$c-lightgrey: #f7f7f7;
 $c-mint: #5ac3b7;
 $c-green: #4ec846;
 $c-yellow: #eec41d;
 $c-red: #e44949;
 $c-blue: #0d91dd;
 $default: 16px;
-$small: 12px;
+$larger: 20px;
+$smaller: 12px;
+$huge: 40px;
 
 html {
   line-height: 1.15;
@@ -37,10 +39,11 @@ div {
 }
 
 .menubar-container {
-  margin: 12px 0px 0px 15px;
+  margin: 15px 0px 0px 14px;
   cursor: pointer;
 
   i {
+    font-size: $larger;
     transition: all 0.5s;
     transform: translateX(100px);
   }
@@ -56,45 +59,136 @@ div {
 
 
 
-
-
 .main {
   margin-left: 50px;
 }
 
-
-
-
-
-
 .header {
+  width: 100%;
+  padding: 10px 20px;
+  background: $c-white;
 }
 
-.search {
+%searhtheme {
+  input {
+    border: 1px solid $c-grey;
+    border-radius: 5px;
+    padding-left: 15px;
+    transition: 1s;
+  }
+
+  input:focus {
+    outline: 4px solid #74ccff71;
+  }
+
+  button {
+    background: $c-black;
+  }
 }
 
-.btn {
+.search-lg {
+  @extend %searhtheme;
+
+  input {
+    width: 30%;
+    min-width: 200px;
+    max-width: 600px;
+  }
+
+  input:focus {
+    width: 60%;
+  }
 }
 
-.icons {
-  display: inline-flex;
-  background-color: #0d91dd;
+.search-md {
+  @extend %searhtheme;
+  margin-bottom: 15px;
 }
 
-.username {
+.topside {
+  display: flex;
+  justify-content: right;
+
+  div {
+    margin: 10px 0px 0px 5px;
+  }
+
+  .username {
+    width: 100px;
+    font-size: $default;
+    color: $c-black;
+  }
 }
 
+.icon-box {
+  width: 50px;
+  font-size: $larger;
+  margin-top: 5px;
+  color: $c-grey;
+  text-align: center;
 
+  i {
+    cursor: pointer;
+  }
 
+  i:hover {
+    color: $c-black;
+  }
 
-
-
+  .noti {
+    position: relative;
+    text-align: center;
+    top: -15px;
+    right: 8px;
+    padding: 1px 4px 1px 4px;
+    background-color: $c-red;
+    border-radius: 3px;
+    color: $c-white;
+    font-size: $smaller;
+    font-weight: bold;
+  }
+}
 
 .dash {
+  padding: 20px;
   background: $c-lightgrey;
+  color: $c-black;
 }
 
-.dash-box {}
+@mixin dashbox($bordercolor) {
+  background: $c-white;
+  border: 1px solid $c-lightgrey;
+  border-radius: 5px;
+  border-left: 4px solid $bordercolor;
+  padding: 20px 10px 10px 20px;
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+
+  i {
+    color: $c-grey;
+    font-size: $huge;
+    margin-top: 15px;
+    margin-right: 20px;
+  }
+}
+
+.dash-box1 {
+  @include dashbox($c-mint)
+}
+
+.dash-box2 {
+  @include dashbox($c-green)
+}
+
+.dash-box3 {
+  @include dashbox($c-purple)
+}
+
+.dash-box4 {
+  @include dashbox($c-yellow)
+}
+
 
 .dash-content {}
 
