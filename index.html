@@ -16,30 +16,29 @@
 </head>
 
 <body>
-  <div>
-    <div class="menubar">
-      <div class="menubar-container">
-        <i class="fa-solid fa-house-chimney"></i>
-        <span>Home</span>
-      </div>
-      <div class="menubar-container">
-        <i class="fa-solid fa-headphones-simple"></i>
-        <span>Services</span>
-      </div>
-      <div class="menubar-container">
-        <i class="fa-solid fa-flag"></i>
-        <span>Alerts</span>
-      </div>
-      <div class="menubar-container">
-        <i class="fa-solid fa-chart-pie" style="margin-left: -3px;"></i>
-        <span>Stats</span>
-      </div>
+
+  <div class="menubar">
+    <div class="menubar-container">
+      <i class="fa-solid fa-house-chimney"></i>
+      <span>Home</span>
+    </div>
+    <div class="menubar-container">
+      <i class="fa-solid fa-headphones-simple"></i>
+      <span>Services</span>
+    </div>
+    <div class="menubar-container">
+      <i class="fa-solid fa-flag"></i>
+      <span>Alerts</span>
+    </div>
+    <div class="menubar-container">
+      <i class="fa-solid fa-chart-pie" style="margin-left: -3px;"></i>
+      <span>Stats</span>
     </div>
   </div>
 
 
   <div class="main">
-    <div class="header shadow">
+    <div class="header">
       <div class="row">
         <div class="col-lg-8">
           <nav class="navbar d-lg-none">
@@ -62,7 +61,7 @@
               </button>
               <div class="collapse navbar-collapse mt-3" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                  <div class="input-group search-md">
+                  <div class="input-group search-md mb-0">
                     <input type="text" class="form-control" placeholder="Search">
                     <button type="button" class="btn btn-dark"><i class="fa-solid fa-magnifying-glass"></i></button>
                   </div>
@@ -94,80 +93,72 @@
         </div>
       </div>
     </div>
-
     <div class="dash">
       <h3 class="mb-4">Dashboard</h3>
       <div class="row">
         <div class="col-lg-3">
-          <div class="dash-box1 shadow">
+          <div class="dash-box1 shadow-sm">
             <div class="dash-content">
               <p>Earnings(Monthly)</p>
-              <p>$400,000</p>
+              <h5>$400,000</h5>
             </div>
             <i class="fa-solid fa-calendar"></i>
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="dash-box2 shadow">
+          <div class="dash-box2 shadow-sm">
             <div class="dash-content">
               <p>Earnings(Annual)</p>
-              <p>$800,000</p>
+              <h5>$800,000</h5>
             </div>
             <i class="fa-solid fa-dollar-sign"></i>
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="dash-box3 shadow">
+          <div class="dash-box3 shadow-sm">
             <div class="dash-content">
               <p>Tasks</p>
-              <p>13</p>
+              <h5>13</h5>
             </div>
             <i class="fa-solid fa-list-check"></i>
           </div>
         </div>
         <div class="col-lg-3">
-          <div class="dash-box4 shadow">
+          <div class="dash-box4 shadow-sm">
             <div class="dash-content">
               <p>Requests</p>
-              <p>26</p>
+              <h5>26</h5>
             </div>
             <i class="fa-solid fa-comments"></i>
           </div>
         </div>
       </div>
     </div>
-    
-    <div class="container visual">
-      <div class="charts shadow">
-        <div>
-          <h4>Earnings Overview</h4>
+    <div class="visual">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="charts shadow-sm">
+            <div class="chart-title">
+              <h4>Earnings Overview</h4>
+            </div>
+            <canvas class="m-3" id="myChart"></canvas>
+          </div>
         </div>
-        <canvas id="myChart"></canvas>
-      </div>
-      <div class="tasks shadow">
-        <div>
-          <h4>Tasks</h4>
-        </div>
-        <div>
-          <ul>
-            <li>Borrowed Items<div class="alert round">
-                <p>14</p>
-              </div>
-            </li>
-            <li>Trello requests<div class="alert round">
-                <p>2</p>
-              </div>
-            </li>
-            <li>Marked Comments<div class="alert round">
-                <p>1</p>
-              </div>
-            </li>
-          </ul>
+        <div class="col-lg-4">
+          <div class="tasks shadow-sm">
+            <div class="task-title">
+              <h4>Tasks</h4>
+            </div>
+            <div class="task-list">
+              <li>Borrowed Items<span>14</span></li>
+              <li>Trello requests<span>2</span></li>
+              <li>Marked Comments<span>1</span></li>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </div>
-
   <script>
     var ctx = document.getElementById('myChart').getContext('2d');
     var myChart = new Chart(ctx, {

@@ -3,6 +3,7 @@ $c-purple: #604dd7;
 $c-grey: #7b7b7b;
 $c-black: #444444;
 $c-lightgrey: #f7f7f7;
+$c-lightgrey2: #d8d8d8;
 $c-mint: #5ac3b7;
 $c-green: #4ec846;
 $c-yellow: #eec41d;
@@ -19,15 +20,13 @@ html {
 
 body {
   margin: 0;
+  color: $c-black;
 }
 
 div {
   box-sizing: border-box;
 }
 
-a {
-  color: $c-black;
-}
 .menubar {
   position: fixed;
   width: 150px;
@@ -74,7 +73,7 @@ a {
 
 %searhtheme {
   input {
-    border: 1px solid $c-grey;
+    border: 1px solid $c-lightgrey2;
     border-radius: 5px;
     padding-left: 15px;
     transition: 1s;
@@ -142,7 +141,7 @@ a {
     position: relative;
     text-align: center;
     top: -15px;
-    right: 8px;
+    right: 10px;
     padding: 1px 4px 1px 4px;
     background-color: $c-red;
     border-radius: 3px;
@@ -153,7 +152,7 @@ a {
 }
 
 .dash {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   background: $c-lightgrey;
   color: $c-black;
 }
@@ -163,9 +162,9 @@ a {
   border: 1px solid $c-lightgrey;
   border-radius: 5px;
   border-left: 4px solid $bordercolor;
-  padding: 20px 10px 10px 20px;
-  margin: 5px;
+  padding: 20px 10px 15px 20px;
   display: flex;
+  margin-bottom: 15px;
   justify-content: space-between;
 
   i {
@@ -192,24 +191,59 @@ a {
   @include dashbox($c-yellow)
 }
 
+.visual {
+  padding: 20px 20px 0px 20px;
+  margin-bottom: 30px;
+  background: $c-lightgrey;
+  color: $c-black;
+  background: $c-lightgrey;
+}
 
-.dash-content {}
+%titletheme {
+  border-bottom: 1px solid $c-lightgrey2;
+  border-radius: 10px 10px 0px 0px;
+  background: $c-lightgrey;
+  padding: 10px 20px 0px 20px;
+}
 
+%contenttheme {
+  border: 1px solid $c-lightgrey2;
+  border-radius: 10px;
+  background: $c-white;
+  margin: 0px 0px 30px;
+}
 
+.charts {
+  @extend %contenttheme;
+}
 
+.chart-title {
+  @extend %titletheme;
+}
 
+.tasks {
+  @extend %contenttheme;
+}
 
-.visual {}
+.task-title {
+  @extend %titletheme;
+}
 
-.charts {}
+.task-list {
+  list-style-type: none;
 
-.tasks {}
+  li {
+    padding: 20px 20px 20px 20px;
+    border: 1px solid $c-lightgrey2;
+  }
 
-
-
-
-
-
-
-
-@media screen and (max-width: 768px) {}
+  span {
+    margin-left: 10px;
+    font-size: $smaller;
+    background: $c-blue;
+    padding: 2px 8px 3px 8px;
+    color: $c-white;
+    border-radius: 10px;
+    font-weight: bold;
+  }
+}

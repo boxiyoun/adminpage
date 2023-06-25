@@ -4,14 +4,11 @@ html {
 
 body {
   margin: 0;
+  color: #444444;
 }
 
 div {
   box-sizing: border-box;
-}
-
-a {
-  color: #444444;
 }
 
 .menubar {
@@ -56,7 +53,7 @@ a {
 }
 
 .search-md input, .search-lg input {
-  border: 1px solid #7b7b7b;
+  border: 1px solid #d8d8d8;
   border-radius: 5px;
   padding-left: 15px;
   transition: 1s;
@@ -111,7 +108,7 @@ a {
   position: relative;
   text-align: center;
   top: -15px;
-  right: 8px;
+  right: 10px;
   padding: 1px 4px 1px 4px;
   background-color: #e44949;
   border-radius: 3px;
@@ -121,7 +118,7 @@ a {
 }
 
 .dash {
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
   background: #f7f7f7;
   color: #444444;
 }
@@ -131,9 +128,9 @@ a {
   border: 1px solid #f7f7f7;
   border-radius: 5px;
   border-left: 4px solid #5ac3b7;
-  padding: 20px 10px 10px 20px;
-  margin: 5px;
+  padding: 20px 10px 15px 20px;
   display: flex;
+  margin-bottom: 15px;
   justify-content: space-between;
 }
 .dash-box1 i {
@@ -148,9 +145,9 @@ a {
   border: 1px solid #f7f7f7;
   border-radius: 5px;
   border-left: 4px solid #4ec846;
-  padding: 20px 10px 10px 20px;
-  margin: 5px;
+  padding: 20px 10px 15px 20px;
   display: flex;
+  margin-bottom: 15px;
   justify-content: space-between;
 }
 .dash-box2 i {
@@ -165,9 +162,9 @@ a {
   border: 1px solid #f7f7f7;
   border-radius: 5px;
   border-left: 4px solid #604dd7;
-  padding: 20px 10px 10px 20px;
-  margin: 5px;
+  padding: 20px 10px 15px 20px;
   display: flex;
+  margin-bottom: 15px;
   justify-content: space-between;
 }
 .dash-box3 i {
@@ -182,9 +179,9 @@ a {
   border: 1px solid #f7f7f7;
   border-radius: 5px;
   border-left: 4px solid #eec41d;
-  padding: 20px 10px 10px 20px;
-  margin: 5px;
+  padding: 20px 10px 15px 20px;
   display: flex;
+  margin-bottom: 15px;
   justify-content: space-between;
 }
 .dash-box4 i {
@@ -192,4 +189,43 @@ a {
   font-size: 40px;
   margin-top: 15px;
   margin-right: 20px;
+}
+
+.visual {
+  padding: 20px 20px 0px 20px;
+  margin-bottom: 30px;
+  background: #f7f7f7;
+  color: #444444;
+  background: #f7f7f7;
+}
+
+.task-title, .chart-title {
+  border-bottom: 1px solid #d8d8d8;
+  border-radius: 10px 10px 0px 0px;
+  background: #f7f7f7;
+  padding: 10px 20px 0px 20px;
+}
+
+.tasks, .charts {
+  border: 1px solid #d8d8d8;
+  border-radius: 10px;
+  background: #ffffff;
+  margin: 0px 0px 30px;
+}
+
+.task-list {
+  list-style-type: none;
+}
+.task-list li {
+  padding: 20px 20px 20px 20px;
+  border: 1px solid #d8d8d8;
+}
+.task-list span {
+  margin-left: 10px;
+  font-size: 12px;
+  background: #0d91dd;
+  padding: 2px 8px 3px 8px;
+  color: #ffffff;
+  border-radius: 10px;
+  font-weight: bold;
 }/*# sourceMappingURL=main.css.map */
